@@ -1,0 +1,283 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --primary-color: #0f1b4c;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Common */
+.content {
+    width: 1110px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    display: inline-block;
+    min-width: 98px;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 18px 16px;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* ======= Header ======= */
+.header {
+    background-color: #e6f0ff;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    padding-top: 38px;
+    padding-bottom: 6rem;
+}
+
+/* ======= Navbar ======= */
+.nav-bar {
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar ul {
+    display: flex;
+    margin-left: 50px;
+}
+
+.nav-bar ul a {
+    padding: 8px 14px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #4f5361;
+}
+
+.nav-bar ul a:hover {
+    text-decoration: underline;
+}
+
+.nav-bar .action {
+    margin-left: auto;
+}
+
+.nav-bar .action-link {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.nav-bar .action-btn {
+    padding: 13px 16px;
+    margin-left: 18px;
+}
+
+/* ======= Hero ======= */
+.hero {
+    margin-top: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.hero .info {
+    width: 51%;
+    flex-shrink: 0;
+}
+
+.hero .sub-title {
+    color: #687690;
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: 0.018rem;
+}
+
+.hero .title {
+    color: #000336;
+    font-size: clamp(4.6rem, 4vw, 6.4rem);
+    font-weight: 700;
+    line-height: 1.18;
+    margin-top: 0.8rem;
+}
+
+.hero .desc {
+    color: #5a6473;
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+    margin-top: 3rem;
+}
+
+.hero-cta {
+    min-width: 17rem;
+    margin-top: 4rem;
+}
+
+.hero .hero-img {
+    position: static;
+    width: 45%;
+    max-width: 520px;
+}
+
+/* ======= Laptop / 4K Scale 300% ======= */
+/* 3840px scale 300% ≈ 1280px CSS viewport */
+@media (max-width: 1300px) {
+    .content {
+        max-width: calc(100% - 48px);
+    }
+
+    .nav-bar ul {
+        margin-left: 36px;
+    }
+
+    .nav-bar ul a {
+        padding: 8px 10px;
+    }
+
+    .hero {
+        margin-top: 6rem;
+        gap: 3rem;
+    }
+
+    .hero .info {
+        width: 52%;
+    }
+
+    .hero .title {
+        font-size: 5.2rem;
+        line-height: 1.15;
+    }
+
+    .hero .desc {
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+        margin-top: 2.4rem;
+    }
+
+    .hero-cta {
+        margin-top: 3rem;
+    }
+
+    .hero .hero-img {
+        width: 44%;
+        max-width: 480px;
+    }
+}
+
+/* ======= Short Height Screens ======= */
+/* Dành cho trường hợp scale 300%, viewport cao chỉ khoảng 800px */
+@media (max-width: 1300px) and (max-height: 850px) {
+    .header {
+        padding-top: 30px;
+        padding-bottom: 4rem;
+    }
+
+    .hero {
+        margin-top: 5rem;
+    }
+
+    .hero .title {
+        font-size: 4.8rem;
+    }
+
+    .hero .desc {
+        margin-top: 2rem;
+    }
+
+    .btn {
+        padding: 14px 16px;
+    }
+
+    .hero-cta {
+        margin-top: 2.6rem;
+    }
+
+    .hero .hero-img {
+        max-width: 440px;
+    }
+}
+
+/* ======= Tablet ======= */
+@media (max-width: 992px) {
+    .nav-bar ul {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 6rem;
+    }
+
+    .hero .info {
+        width: 100%;
+    }
+
+    .hero .hero-img {
+        width: 100%;
+        max-width: 520px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* ======= Mobile ======= */
+@media (max-width: 576px) {
+    html {
+        font-size: 56.25%;
+    }
+
+    .content {
+        max-width: calc(100% - 32px);
+    }
+
+    .header {
+        padding-top: 24px;
+    }
+
+    .nav-bar .action-link {
+        display: none;
+    }
+
+    .nav-bar .action-btn {
+        margin-left: 0;
+        padding: 11px 14px;
+    }
+
+    .hero {
+        margin-top: 5rem;
+    }
+
+    .hero .title {
+        font-size: 4.2rem;
+    }
+
+    .hero .desc {
+        font-size: 1.6rem;
+        line-height: 2.7rem;
+    }
+
+    .hero .hero-img {
+        max-width: 420px;
+    }
+}
