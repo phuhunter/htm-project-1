@@ -599,9 +599,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0.8;
 }
 .footer .social-link + .social-link {
     margin-left: 16px;
+}
+.footer .social-link:hover {
+    opacity: 1;
 }
 .footer .end {
     margin-top: 81px;
