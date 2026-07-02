@@ -6,6 +6,10 @@
     --primary-color: #0f1b4c;
     /* --primary-color: #ff6651; */
 }
+html,
+body {
+    scroll-behavior: smooth;
+}
 html {
     font-size: 62.5%;
 }
@@ -82,7 +86,12 @@ body {
     border-radius: 8px;
 }
 .hero {
-    margin-top: 13rem;
+    /* margin-top: 13rem; */
+    display: flex;
+    /* flex-direction: column;
+    justify-content: center; */
+    align-items: center;
+    min-height: 100vh;
 }
 .hero .info {
     width: 51%;
@@ -120,12 +129,12 @@ body {
 @media screen and (min-width: 1200px) and (max-width: 1300px) and (min-resolution: 3dppx) {
     .header {
         padding-top: 28px;
-        min-height: 800px;
-        height: auto;
+        /* min-height: 800px;
+        height: auto; */
     }
 
     .hero {
-        margin-top: 7rem;
+        /* margin-top: 7rem; */
     }
 
     .hero .title {
@@ -145,7 +154,8 @@ body {
 
     .hero .hero-img {
         width: 50%;
-        max-width: 600px;
+        /* max-width: 600px; */
+        max-height: calc(100dvh - 100px);
         right: calc((100vw - 1110px) / 2 - 40px);
     }
 }
