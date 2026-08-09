@@ -1,0 +1,201 @@
+/* -----------------PC -----------------*/
+@media screen and (min-width: 992px) {
+    .mobile-header {
+        display: none;
+    }
+    .view-all {
+        display: none;
+    }
+}
+/* -----------------MOBILE & TABLET-----------------*/
+@media screen and (max-width: 991.98px) {
+    .nav-bar {
+        position: relative;
+    }
+    .nav-bar ul {
+        display: none;
+    }
+    .nav-bar .logo {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .nav-bar .action {
+        margin-right: 40px;
+    }
+    .toggle-menu svg {
+        width: 24px;
+        color: #666;
+    }
+    .menu-overlay {
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s ease;
+    }
+    .menu-checkbox:checked ~ .menu-overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+    .menu-drawer {
+        position: fixed;
+        inset: 0 40% 0 0;
+        padding: 60px;
+        background-color: #fff;
+        transform: translateX(-100%);
+        transition: transform 0.5s ease;
+    }
+    .menu-checkbox:checked ~ .menu-drawer {
+        transform: translateX(0);
+    }
+    .menu-drawer ul {
+        margin-top: 20px;
+    }
+    .menu-drawer ul a {
+        color: #333;
+        display: block;
+        padding: 14px 0;
+        font-weight: 500;
+    }
+    .hero-img {
+        display: none;
+    }
+    .hero .info {
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .hero .desc {
+        width: 80%;
+        text-align: center;
+        margin: 30px auto auto;
+    }
+    .clients .images {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .stats .content > .row {
+        flex-direction: column;
+    }
+    .stats .row .img-block,
+    .stats .row .info {
+        width: 100%;
+    }
+    .stats .row .info {
+        padding: 0;
+        order: 1;
+    }
+    .stats .row .img-block {
+        order: 2;
+    }
+    .stats .info .sub-title {
+        width: 70%;
+    }
+    .stats .info .row-desc {
+        width: 100%;
+        margin-bottom: 80px;
+    }
+    .stats .img-block .image {
+        max-width: 100%;
+    }
+    .image-subscription {
+        display: none;
+    }
+    .footer .content .row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        gap: 30px;
+    }
+    .footer .content .row .column {
+        text-align: center;
+    }
+    footer .social {
+        justify-content: center;
+    }
+}
+/* -----------------TABLET-----------------*/
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+    .show-in-mobile {
+        display: none;
+    }
+    .features .list {
+        grid-template-columns: 1fr 1fr;
+    }
+    .footer .content .row {
+        padding-left: 20px;
+    }
+    .footer .content .row.end {
+        padding-bottom: 20px;
+    }
+    .view-all {
+        display: none;
+    }
+}
+/* ---------MOBILE------------ */
+@media screen and (max-width: 767.98px) {
+    .hide-on-mobile {
+        display: none;
+    }
+    .nav-bar .action {
+        display: none;
+    }
+    .menu-drawer {
+        padding: 40px;
+        inset: 0 25% 0 0;
+    }
+    .seperated {
+        border-top: 1.5px solid #ebebeb;
+    }
+    .hero .info {
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .hero .title {
+        font-size: 5.4rem;
+        margin-top: 3rem;
+    }
+    .list-guides {
+        flex-direction: column;
+        gap: 32px;
+    }
+    .guides-item {
+        width: 100%;
+    }
+    .features .list {
+        grid-template-columns: 1fr;
+    }
+    .features .row {
+        gap: 20px;
+    }
+    .features .view-all {
+        display: flex;
+        margin-inline: auto;
+        max-width: fit-content;
+        margin-top: 50px;
+    }
+    .stats .info .sub-title {
+        width: 100%;
+    }
+    .stats-end {
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: center; */
+        gap: 30px;
+    }
+    .stats-number {
+        text-align: center;
+    }
+    .footer .content .row.end {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        text-align: center;
+    }
+    .footer .logo {
+        margin-inline: auto;
+    }
+}

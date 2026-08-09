@@ -6,6 +6,7 @@
         <title>F8 Project 01</title>
         <link rel="stylesheet" href="./assets/csss/reset.css" />
         <link rel="stylesheet" href="./assets/csss/styles.css" />
+        <link rel="stylesheet" href="./assets/csss/responsive.css" />
         <link rel="shortcut icon" href="./assets/img/besnik.png" type="image/x-icon">
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,15 +18,21 @@
   href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700;900&display=swap"
   rel="stylesheet"
 />
+<!-- Font Awesome 6 CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     </head>
     <body>
         <main >
-            <!-- Header -->
+            <!-- PC Header -->
             <header class="header">
                 <div class="content">
                     <nav class="nav-bar">
+                        <!-- Tablet/Mobile Menu-->
+                         <label for="menu-checkbox" class="toggle-menu">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path fill="currentcolor" d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z"/></svg>
+                        </label>
                         <!-- logo -->
-                        <a href="#!"><img src="./assets/img/besnik.svg" alt="Besnik." /></a>
+                        <a class="logo" href="#!"><img src="./assets/img/besnik.svg" alt="Besnik." /></a>
 
                         <!-- Navigation -->
                         <ul>
@@ -45,7 +52,7 @@
                         <div class="info">
                             <p class="sub-title">Welcome to Besnik Agency</p>
                             <h1 class="title">
-                                Discover a place you'll love to live.
+                                Discover a  place you'll love to live.
                             </h1>
                             <p class="desc">
                                 Get the best real estate deals first, before
@@ -62,8 +69,27 @@
                     </div>
                 </div>
             </header>
+            <!-- Tablet/Mobile Header -->
+             <header class="mobile-header">
+                <input type="checkbox" name="" id="menu-checkbox" class="menu-checkbox" hidden>
+                <!-- Overlay -->
+                <label for="menu-checkbox" class="menu-overlay"></label>
+                <!-- Menu content -->
+                <div class="menu-drawer">
+                    <a href="#!"><img src="./assets/img/besnik.svg" alt="Besnik." /></a>
+                      <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#!">Resources</a></li>
+                            <li><a href="#!">Contact</a></li>
+                            <li class="show-in-mobile seperated"><a href="#!">Sign in</a></li>
+                            <li class="show-in-mobile"><a href="#!">Sign up</a></li>
+                        </ul>
+                </div>
+             </header>
             <!-- ------------------Clients--------------- -->
-            <div class="clients">
+            <div class="clients" >
                 <div class="content">
                     <div class="row">
                         <img src="./assets/img/besnik.svg" alt="Besnik" />
@@ -79,7 +105,7 @@
                         <p class="desc">
                             More than 45,000+ companies trust besnik
                         </p>
-                        <p class="desc">5 Star Ratings (2k+ Review)</p>
+                        <p class="desc hide-on-mobile">5 Star Ratings (2k+ Review)</p>
                     </div>
                     <div class="images">
                         <div class="images-item">
@@ -102,7 +128,7 @@
             </div>
 
             <!----------- Guides-------- -->
-            <div id="services" class="guides">
+            <div id="services" class="guides" >
                 <div class="content">
                     <h2 class="sub-title">How its works?</h2>
                     <p class="desc">
@@ -166,7 +192,7 @@
             </div>
 
             <!----------- Features-------- -->
-            <div id="features" class="features">
+            <div id="features" class="features" >
                 <div class="content">
                     <header>
                         <h2 class="sub-title">Featured Properties</h2>
@@ -175,11 +201,11 @@
                                 Everything you need to know when you're looking
                             </p>
                             <a href="" class="link"
-                                ><span>View All Properties</span>
+                                ><span class="hide-on-mobile" >View All Properties</span>
                                 <img
                                     src="./assets/img/arrow.svg"
                                     alt=""
-                                    class="arrow"
+                                    class="arrow hide-on-mobile"
                             /></a>
                         </div>
                     </header>
@@ -254,11 +280,12 @@
                             </div>
                         </div>
                     </div>
+                    <a href="#!" class="view-all btn">View all Properties</a>
                 </div>
             </div>
             
             <!----------- Stats-------- -->
-            <div class="stats">
+            <div class="stats"  >
                 <div class="content">
                     <div class="row">
                         <div class="img-block">
@@ -335,7 +362,7 @@
 
 
         <!-- -------------Subscription-------------- -->
-         <div class="subscription">
+         <div class="subscription" >
             <div class="content">
                 <div class="body">
                     <div class="info">
@@ -348,7 +375,7 @@
             </div>
          </div>
          <!-- -----------Footer----------------- -->
-         <footer class="footer">
+         <footer class="footer"  >
             <div class="content">
                 <div class="row">
                     <div class="column">
